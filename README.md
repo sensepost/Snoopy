@@ -161,11 +161,11 @@ Each Snoopy entity can have different transforms applied to it. Drag the 'Snoopy
 The Snoopy machines allow you to automatically sequence transforms, and filter/delete nodes based on requirements. The source/comments should sufficiently outline how they work.
 
 
-3. Legal Considerations
+4. LEGAL CONSIDERATIONS
 =======================
 All or some of the Snoopy components may be illegal where you live. Please find out before using the software. In the United Kingdom the probe collection component is legal due to the broadcast nature of the traffic. However, the rogue access point component is most likely illegal in most regions. SensePost takes no responsibility for you getting into trouble from using this tool. 
 
-4. Security Considerations
+5. SECURITY CONSIDERATIONS
 ==========================
 Each 'Drone pack' contains OpenVPN and SSH keys. If a Drone is compromised (by theft or
 otherwise) it may pose a security risk to your server. It is *highly* recommended that
@@ -174,7 +174,7 @@ following automatically added to the *.ssh/authorized_hosts file*, for a little 
 
     "no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty,command="/usr/bin/rsync ${SSH_ORIGINAL_COMMAND#* }""
 
-5. Future Work
+6. FUTURE WORK
 ===============
 There are lots of thing still to be done / added. This version is rather PoC. 
 
@@ -188,14 +188,14 @@ There are lots of thing still to be done / added. This version is rather PoC.
 - Stolen cookie Firefox plugin loader
 - Replace data upload process (currently all drones rsync with the same user).
 
-6. Known issues / bugs
+7. KNOWN ISSUES / BUGS
 ======================
 
 - SSIDs with unusual characters may cause trouble
 - Currently all probe requests are captured and populated into a db. The db gets large rather quickly, especially in busy areas. The database should be normalized, and a decision on whether to keep all probes or not made.
 - Originally the probe sniffing was done with Scapy, but replaced with a tshark one liner (due to Scapy's inability to read 802.11 signal strength parameter). A discovered caveat with the old version of tshark available on the N900 is that it does not support outputting the epoch time, only the local time. This messes badly with timezones. If you could compile a new tshark for the N900 that'd be great (here's looking at you PwnieExpress). Point being, make sure your server/drones are all in the same timezone for now.
 
-7. Contact
+8. CONTACT
 ==============
 The code was written by Glenn (with the exception of Walter's web interface). You can
 email him via glenn@sensepost.com or bug^H^H^H follow him on Twitter: @glennzw. Glenn's not a developer, and apologies for his poor code. He's a hacker, and this tool let him hack you.
