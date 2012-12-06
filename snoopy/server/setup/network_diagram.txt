@@ -1,0 +1,50 @@
+## This is the Snoopy architecutre diagram
+## Victims traffic is foward via drones to the Server, meaning on the server
+## we can isolate traffic per individual Victim IP.
+## I chose to use a TAP interface such that if desired we could route layer 2
+## traffic through the server.
+
+## glenn@sensepost.com
+
+	
+  Victim1		          Drone1			    		Server
++----------+		+-----------------------+			+-----------------------+
+|    wlan0-|<---WiFi--->|-at0 	    		|			|		    eth0|
+|    	   |	|	| 10.2.0.1		|			|		1.2.3.45|
+| dhclient |	|	|			|			|			|
+|	   |	|	|	           tap0-|<------openvpn-------->|-tap0			|
++----------+	|	|	   192.168.42.2	|		+-----/	| 192.168.42.1		|
+(10.2.0.2)*	|	+-----------------------+		|	+-----------------------+
+		|	  					|
+		|	  					|	ip route add 10.2.0.0 via 192.168.42.2
+		|						|	ip route add 10.3.0.0 via 192.168.42.3
+  Victim2	|						|
++----------+	|						|
+|    wlan0-|<---+						|
+|    	   |							|
+| dhclient |							|
+|	   |							|
++----------+							|
+(10.2.0.3)*							|
+								|
+								|
+								|
+  Victim3		      	Drone2				|		   
++----------+		+-----------------------+		|	
+|    wlan0-|<---WiFi--->|-at0 	    		|		|	
+|    	   |	|	| 10.3.0.1		|        	|
+| dhclient |	|	|			|	   	|
+|	   |	|	|	           tap0-|<---openvpn----+
++----------+	|	|	   192.168.42.3	|		
+(10.3.0.2)*	|	+-----------------------+		
+		|
+		|	  	
+		|
+  Victim4	|						
++----------+	|						
+|    wlan0-|<---+						
+|    	   |							
+| dhclient |							
+|	   |							
++----------+
+(10.3.0.3)*

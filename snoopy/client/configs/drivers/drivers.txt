@@ -1,0 +1,1 @@
+Only required for the N900. The setup_n900.sh script will copy the PwnPhone's 802.11 drivers here, to ensure they match the powerkernel version.

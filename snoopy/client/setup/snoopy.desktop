@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Name=Snoopy
+Comment=Snoopy
+Terminal=true
+Icon=snoopy
+Exec=osso-xterm -e "sudo /root/snoopy/bin/snoopy.sh"
+X-Window-Icon=snoopy
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable
+#Categories=Application;Network;Security

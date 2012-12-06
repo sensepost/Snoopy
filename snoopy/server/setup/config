@@ -1,0 +1,4 @@
+vpn_server=""
+rsync_user=""
+rsync_user_home=""
+web_root="/var/www"

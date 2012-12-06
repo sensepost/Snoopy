@@ -1,0 +1,118 @@
+/* Base styles */
+html { background-color: #e5e5e5; }
+body {
+    font-family: sans-serif;
+    color: #666;
+    width: 960px;
+
+    margin: 0 auto;
+}
+input, select {
+    border: 1px solid #666;
+    background-color: #fff;
+}
+
+a {
+    color: #6c7994;
+    text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+a:before { content: '['; }
+a:after { content: ']'; }
+
+.clr { clear: both; }
+
+#doc {
+    background: url("/static/images/background-gradient.png") repeat-y scroll 0 0 #FFFFFF;
+    padding: 0 22px;
+}
+
+#topbar {
+    background-color: #fff;
+    color: #666;
+    padding: 5px;
+    border-bottom: 2px solid #abbce6;
+}
+#topbar > .sp-logo {
+    float: left;
+}
+#topbar > div#title {
+    display: table-cell;
+    float: left;
+    font-size: xx-large;
+    height: 109px;
+    margin: auto 50px;
+    vertical-align: middle;
+}
+#topbar > div#title > a {
+    margin: auto 0;
+    vertical-align: middle;
+}
+#topbar > div#logout {
+    height: 30px;
+    float: right;
+    vertical-align: middle;
+}
+
+#content {
+    background-color: #fff;
+    border-bottom: 2px solid #abbce6;
+}
+
+#leftbar {
+    width: 170px;
+    float: left;
+}
+#leftbar select {
+    display: block;
+    width: 100%;
+}
+#leftbar #client-list {
+    font-family: monospace;
+}
+
+#clients-area {
+    width: 722px;
+    min-height: 500px;
+    float: right;
+    padding: 10px;
+}
+
+.client-window {
+    background-color: #fff;
+    border: 2px solid #abbce6;
+    float: left;
+}
+.client-window > .cwin-titlebar {
+    height: 20px;
+    background-color: #cbd7f0;
+    padding: 0 5px;
+}
+.client-window > .cwin-titlebar > .cwin-title {
+    display: inline;
+    font-weight: bold;
+}
+.client-window > .cwin-titlebar > .cwin-close,
+.client-window > .cwin-titlebar > .cwin-reload {
+    float: right;
+}
+.client-window > .cwin-content {
+    position: absolute;
+    margin: auto;
+    top: 20px;
+    bottom: 0px;
+    overflow: auto;
+    width: 100%;
+}
+
+.data-section {
+    border-top: 1px solid #abbce6;
+    border-bottom: 1px solid #abbce6;
+}
+.data-section li {
+    list-style: disc inside;
+    margin-left: 10px;
+}
+.data-section > .section-title {
+    font-style: italic;
+}

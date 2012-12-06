@@ -1,0 +1,3 @@
+"timestamp","src_ip","domain","url","secure","post"
+"2012-09-04 00:05:34","127.0.0.1","www.facebook.com","gin.php?login_attempt=1","1","lsd=AVq3hWyM&email=test&pass=test&default_persistent=0&charset_test=€,´,€,´,水,Д,Є&timezone=-120&lgnrnd=150518_f6eB&lgnjs=1346709923&locale=en_US"
+"2012-09-04 00:05:59","127.0.0.1","safebrowsing.clients.google.com","febrowsing/downloads?client=chromium&appver=18.0.1025.151&pver=2.2&wrkey=AKEgNiuKlgfbFTTjNhgiQoemn1RyByxpgyhnbhtYlVoJL8PeoNVEbpPel-4V-1DQUu8pYj_V4KOATayfAkrrPDvoYiRJ2hCNVQ==","0","goog-malware-shavar;a:82048-90224:s:84481-94487:macgoog-phish-shavar;a:223615-233668:s:105018-109559:macgoog-badbinurl-shavar;a:5355-7706:s:4513-7608:macgoog-csdwhite-sha256;a:1-24:s:1:macgoog-downloadwhite-digest256;a:1-41:s:1-5:mac"
